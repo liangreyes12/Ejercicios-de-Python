@@ -1,0 +1,69 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.manifest
+*.spec
+
+# --- Virtual environments ---
+venv/
+env/
+ENV/
+.venv/
+.virtualenv/
+pip-wheel-metadata/
+pip-log.txt
+
+# --- Testing ---
+.coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# --- Jupyter Notebook ---
+.ipynb_checkpoints/
+*.ipynb
+
+# --- Django/Flask ---
+*.log
+local_settings.py
+db.sqlite3
+instance/
+.webassets-cache
+
+# --- Windows ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- WSL/Linux ---
+*.swp
+*.swo
+*~
+.cache/
+.tmp/
+.trash/
+
+# --- IDEs & Editors ---
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# --- Misc ---
+*.bak
+*.tmp
+*.old
+*.orig
+*.log
