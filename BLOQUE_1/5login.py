@@ -10,7 +10,7 @@ arrojar una alerta donde ya no tendrá acceso al sistema
 
 - Debe incluir una excepcion para errores inesperados
 """
-from os import sys
+import sys
 
 listado = {"liang":"Liang123CoOL", 
            "jhon":"Type&7.ka@", 

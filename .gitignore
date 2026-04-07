@@ -61,9 +61,14 @@ $RECYCLE.BIN/
 *.sublime-workspace
 *.sublime-project
 
+# --- Draw.io ---
+*.drawio
+*.drawio.bkp
+*.dio
+*.dtmp
+
 # --- Misc ---
 *.bak
 *.tmp
 *.old
 *.orig
-*.log

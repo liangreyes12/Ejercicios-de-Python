@@ -1,7 +1,7 @@
 """
 Dado un número, indica si es múltiplo de 3 y 5.
 """
-from os import sys
+import sys
 
 while True:
     try:
