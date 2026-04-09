@@ -39,7 +39,10 @@ while i == True:
             cantidad = notas.UserData()
             notasDatos = notas.obtenerNotas(cantidad)
             promedio = notas.promedioNotas(notasDatos)
-            reiniciar = notas.reinicio(i)
+            reiniciar = notas.reinicio()
+            mensaje = notas.mensajeFinal(notasDatos)
+            if reiniciar  == False:
+                break
         case 2:
             print(f"Gracias por usar nuestro Software")
             notas.limpiezaPantalla()

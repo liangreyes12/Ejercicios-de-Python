@@ -1,6 +1,15 @@
 import sys
 from time import sleep
 from os import system, name
+from collections import Counter
+
+rangos = [
+    (0, 3, "INSUFICIENTE"),
+    (3, 3.9, "SUFICIENTE"),
+    (4, 4.5, "BUENA"),
+    (4.5, 4.9, "NOTABLE"),
+    (5, 5, "EXCELENTE")
+]
 
 def obtenerNotas(n):
     i = 1
@@ -13,7 +22,6 @@ def obtenerNotas(n):
             i += 1
         else:
             print(f"NOTA INVALIDA, DEBE SER ENTRE 0 y 5.0")
-    print(listado)
     return listado
 
 def promedioNotas(nota):
@@ -29,21 +37,39 @@ def promedioNotas(nota):
     else:
         print(f"¡Excelente! Matrícula de honor: {round(total, 2)}")
 
-def reinicio(i):
+def reinicio():
     user = ""
     while user != "S" or user != "N":
         print(f"¿Quiere clasificar otra nota? (S/N):")
         user = input(f"- ").upper()
         if user == "S":
-            pass
+            limpiezaPantalla()
+            break
         elif user == "N":
-            
-            i = False
+            return False
         else:
             print(f"OPCION INVALIDA, DEBES ESCOGER: (S/N)")
 
 def mensajeFinal(listadoNotas):
-   pass
+    
+    conteo = Counter(
+        next(nombre for li, ls, nombre in rangos if li <= nota <= ls)
+        for nota in listadoNotas
+    )
+
+    print("""===LISTADO DE NOTAS===
+          
+|**************|************|*******|*********|***********|
+| INSUFICIENTE | SUFICIENTE | BUENA | NOTABLE | EXCELENTE |
+|--------------|------------|-------|---------|-----------|""")
+
+    print(f"| {conteo.get('INSUFICIENTE', 0):<12} | "
+          f"{conteo.get('SUFICIENTE', 0):<10} | "
+          f"{conteo.get('BUENA', 0):<5} | "
+          f"{conteo.get('NOTABLE', 0):<7} | "
+          f"{conteo.get('EXCELENTE', 0):<9} |")
+
+    print("|--------------|------------|-------|---------|-----------|")
 
 def UserData():
     n = 0
@@ -71,5 +97,5 @@ def limpiezaPantalla():
         sleep(2)
         system("cls")
     else:
-        sleep(2)
+        sleep(1)
         system("clear")
