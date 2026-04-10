@@ -24,6 +24,7 @@ while True:
         else:
             print(f"===CLASIFICACION DEL TRIANGULO===")
             lados = calculoTriangulo.clasificacionLados(valor1, valor2, valor3)
+            angulos = calculoTriangulo.clasificacionAngulos(valor1, valor2, valor3)
             break
     except KeyboardInterrupt:
         print(f"\nEL USUARIO HA DETENIDO EL FLUJO DEL PROGRAMA")
