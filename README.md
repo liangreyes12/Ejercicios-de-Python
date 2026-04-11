@@ -14,8 +14,12 @@ Esta dividido en una estructura de carpetas según el nivel y dificultad de los 
 
 - Algunos ejercicios hacen uso de **módulos externos**,  creados para facilitar la codificación y buenas prácticas de desarrollo. Los módulos externos los podrás encontrar en la carpeta: ***"MODULOS"***
 
-- Los ejercicios que hacen uso de **los modulos externos**, se ejecutan en la terminal estando en ***(la carpeta principal)*** y mediante el **comando**:
+- Los ejercicios hacen uso de **los modulos externos**, para poder ejecutarse en la terminal debes estar en ***(la carpeta principal)*** `EJERCICIOS\`  y usar el **comando**:
   
-```
+```bash
+# Windows
+python -m <NombreDeBloque>.<NombreDearchivo>.py
+
+# Linux
 python3 -m <NombreDeBloque>.<NombreDearchivo>.py
 ````

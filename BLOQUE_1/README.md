@@ -41,9 +41,11 @@ Los ejercicios 7, 8 y 9 hacen uso de módulos externos ubicados en la carpeta `M
 Para ejecutar todos los ejercicios, debes estar en la carpeta principal `EJERCICIOS\` y digitar el comando:
 
 ```bash
-# Windows y Linux
+# Windows
+python -m <NombreDeBloque>.<NombreDearchivo>.py
+
+# Linux
 python3 -m <NombreDeBloque>.<NombreDearchivo>.py
-```
 
 ## Notas Adicionales
 
