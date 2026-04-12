@@ -29,3 +29,19 @@ Manejar entradas inválidas del usuario (letras, negativos, cero) con mensajes c
 5. Extra (opcional pero recomendado):
 - Mide el tiempo de ejecución de la impresión y muéstralo en milisegundos al final.
 """
+
+from sys import exit
+print(f"===IMPRESION NUMERICA===")
+try:
+    limite = int(input(f"Ingrese limite: "))
+    orden = int(input(f"Orden de impresion (1. ASC / 2. DES): "))
+except KeyboardInterrupt:
+    print(f"\nEL USUARIO A DETENIDO EL FLUJO DEL PROGRAMA")
+    exit(1)
+except EOFError:
+    print(f"\nEL USUARIO A DETENIDO EL FLUJO DEL PROGRAMA")
+    exit(1)
+except ValueError:
+    print(f"EL DATO INGRESADO DEBE SER DE TIPO NUMERICO ENTERO")
+except Exception as e:
+    print(f"ERROR: {e}")
